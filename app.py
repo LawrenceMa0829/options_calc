@@ -66,6 +66,18 @@ st.markdown("""
     font-family: inherit;
     font-style: inherit;
 }
+.compact-table * {
+    white-space: nowrap !important;
+}
+.compact-table {
+    font-size: 0.85rem !important;
+}
+.compact-table input[type="number"] {
+    width: 3.5rem !important;
+}
+.compact-table .stNumberInput > div {
+    padding: 0 0.15rem !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -93,6 +105,7 @@ st.markdown("---")
 COL = [3, 1.5, 1.5, 2, 2.5]
 
 # Header row
+st.markdown('<div class="compact-table">', unsafe_allow_html=True)
 h = st.columns(COL)
 for i, title in enumerate(["Item", "DTE", "QQQ Price", "期權金", "平倉位"]):
     h[i].markdown(f"**{title}**")
@@ -186,6 +199,8 @@ row18_premium = c[3].number_input(
     label_visibility="collapsed",
 )
 c[4].text("> " + str(math.ceil(row18_qqq + row18_premium + 3)))
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("---")
 
