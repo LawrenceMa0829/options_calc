@@ -132,7 +132,7 @@ with col3:
 st.markdown("---")
 
 # ===================== Options Table =====================
-COL = [4.0, 1.6, 1.6, 2.0, 2.2]
+COL = [4.0, 1.6, 2.5, 2.0, 2.2]
 
 # Header row
 h = st.columns(COL)
