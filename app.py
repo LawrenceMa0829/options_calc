@@ -50,7 +50,7 @@ st.markdown("""
     display: block;
     text-align: right;
     font-weight: inherit;
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     font-family: inherit;
     font-style: inherit;
 }
