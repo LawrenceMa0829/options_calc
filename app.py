@@ -145,7 +145,7 @@ row11_qqq = qqq_price - down_spread - spread_width - 14
 c = st.columns(COL)
 c[0].write("long put (Buy)↓P")
 c[1].write("(60DTE)")
-c[2].markdown(f'<div class="qqq-price-darkgreen-right">{row11_qqq}</div>', unsafe_allow_html=True)
+c[2].markdown(f'<div class="qqq-price-darkgreen-right" style="text-align:right;color:#00c853;background:#222;">{row11_qqq}</div>', unsafe_allow_html=True)
 row11_premium = c[3].number_input(
     "premium_60dte_put", value=18.52, step=0.1, format="%.2f",
     key="premium_60dte_put",
@@ -162,7 +162,7 @@ row13_qqq = qqq_price - down_spread - spread_width
 c = st.columns(COL)
 c[0].write("long put (Buy)↓P")
 c[1].write("(2DTE)")
-c[2].markdown(f'<div class="qqq-price-darkgreen-right">{row13_qqq}</div>', unsafe_allow_html=True)
+c[2].markdown(f'<div class="qqq-price-darkgreen-right" style="text-align:right;color:#00c853;background:#222;">{row13_qqq}</div>', unsafe_allow_html=True)
 c[3].number_input(
     "premium_2dte_lp", value=1.30, step=0.1, format="%.2f",
     key="premium_2dte_lp",
@@ -204,7 +204,7 @@ row16_qqq = qqq_price + up_spread + spread_width
 c = st.columns(COL)
 c[0].write("long call (Buy)↑C")
 c[1].write("(2DTE)")
-c[2].markdown(f'<div class="qqq-price-darkgreen-left">{row16_qqq}</div>', unsafe_allow_html=True)
+c[2].markdown(f'<div class="qqq-price-darkgreen-left" style="text-align:left;color:#00c853;background:#222;">{row16_qqq}</div>', unsafe_allow_html=True)
 c[3].number_input(
     "premium_2dte_lc", value=0.63, step=0.1, format="%.2f",
     key="premium_2dte_lc",
@@ -221,7 +221,7 @@ row18_qqq = qqq_price + up_spread + spread_width + 14
 c = st.columns(COL)
 c[0].write("long call (Buy)↑C")
 c[1].write("(60DTE)")
-c[2].markdown(f'<div class="qqq-price-darkgreen-left">{row18_qqq}</div>', unsafe_allow_html=True)
+c[2].markdown(f'<div class="qqq-price-darkgreen-left" style="text-align:left;color:#00c853;background:#222;">{row18_qqq}</div>', unsafe_allow_html=True)
 row18_premium = c[3].number_input(
     "premium_60dte_call", value=18.35, step=0.1, format="%.2f",
     key="premium_60dte_call",
