@@ -176,7 +176,7 @@ row14_qqq = qqq_price - down_spread
 c = st.columns(COL)
 c[0].write("short put (Sell)↓P")
 c[1].write("(2DTE)")
-c[2].markdown(f'<span class="qqq-price-right qqq-price-red">{row14_qqq}</span>', unsafe_allow_html=True)
+c[2].markdown(f'<span class="qqq-price-right qqq-price-red" style="color:#ff2222;">{row14_qqq}</span>', unsafe_allow_html=True)
 c[3].number_input(
     "premium_2dte_sp", value=1.49, step=0.1, format="%.2f",
     key="premium_2dte_sp",
@@ -190,7 +190,7 @@ row15_qqq = qqq_price + up_spread
 c = st.columns(COL)
 c[0].write("short call (Sell)↓C")
 c[1].write("(2DTE)")
-c[2].markdown(f'<span class="qqq-price-red">{row15_qqq}</span>', unsafe_allow_html=True)
+c[2].markdown(f'<span class="qqq-price-red" style="color:#ff2222;">{row15_qqq}</span>', unsafe_allow_html=True)
 c[3].number_input(
     "premium_2dte_sc", value=0.93, step=0.1, format="%.2f",
     key="premium_2dte_sc",
