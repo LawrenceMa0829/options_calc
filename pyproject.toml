@@ -1,0 +1,22 @@
+[project]
+name = "options-calc"
+version = "0.1.0"
+description = "Streamlit Options Calc"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [ { name = "you", email = "you@example.com" } ]
+requires-python = ">=3.10"
+
+dependencies = [
+	"streamlit>=1.30.0",
+	"uvicorn>=0.22.0",
+	"uvloop>=0.17.0; sys_platform != 'win32'",
+	"httptools>=0.6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

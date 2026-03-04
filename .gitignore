@@ -1,0 +1,15 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore egg-info
+options_calc.egg-info/
+
+# Lockfile from uv tool
+uv.lock
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store

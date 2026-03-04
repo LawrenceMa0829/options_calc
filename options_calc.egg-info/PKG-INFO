@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: options-calc
+Version: 0.1.0
+Summary: Streamlit Options Calc
+Author-email: you <you@example.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit>=1.30.0
+Requires-Dist: uvicorn>=0.22.0
+Requires-Dist: uvloop>=0.17.0; sys_platform != "win32"
+Requires-Dist: httptools>=0.6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"

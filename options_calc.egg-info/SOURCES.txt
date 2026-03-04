@@ -1,0 +1,7 @@
+app.py
+pyproject.toml
+options_calc.egg-info/PKG-INFO
+options_calc.egg-info/SOURCES.txt
+options_calc.egg-info/dependency_links.txt
+options_calc.egg-info/requires.txt
+options_calc.egg-info/top_level.txt
