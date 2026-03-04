@@ -82,12 +82,11 @@ st.markdown("""
 }
 [data-testid="stColumn"] {
     min-width: 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 /* Shrink text and inputs inside columns */
 [data-testid="stColumn"] p,
 [data-testid="stColumn"] span,
-[data-testid="stColumn"] div,
 [data-testid="stColumn"] pre {
     font-size: 0.78rem !important;
     white-space: nowrap !important;
