@@ -45,26 +45,34 @@ st.markdown("""
 .qqq-price-darkgreen-right {
     background-color: #222 !important;
     color: #00c853 !important;
-    padding: 0.5em 1em;
+    padding: 0.15rem 0.5rem !important;
     border-radius: 0.25em;
-    display: block;
+    display: inline-block !important;
+    vertical-align: middle;
     text-align: right;
-    font-weight: inherit;
-    font-size: 0.8rem !important;
-    font-family: inherit;
-    font-style: inherit;
-}
-.qqq-price-darkgreen-left {
-    background-color: #222 !important;
-    color: #00c853 !important;
-    padding: 0.5em 1em;
-    border-radius: 0.25em;
-    display: block;
-    text-align: left;
+    line-height: 1.2 !important;
     font-weight: inherit;
     font-size: 0.9rem !important;
     font-family: inherit;
     font-style: inherit;
+    overflow: visible !important;
+    height: auto !important;
+}
+.qqq-price-darkgreen-left {
+    background-color: #222 !important;
+    color: #00c853 !important;
+    padding: 0.15rem 0.5rem !important;
+    border-radius: 0.25em;
+    display: inline-block !important;
+    vertical-align: middle;
+    text-align: left;
+    line-height: 1.2 !important;
+    font-weight: inherit;
+    font-size: 0.9rem !important;
+    font-family: inherit;
+    font-style: inherit;
+    overflow: visible !important;
+    height: auto !important;
 }
 /* Force all column rows to stay on one line and shrink on mobile */
 [data-testid="stHorizontalBlock"] {
