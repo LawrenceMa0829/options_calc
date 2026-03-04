@@ -50,7 +50,7 @@ st.markdown("""
     display: block;
     text-align: right;
     font-weight: inherit;
-    font-size: inherit;
+    font-size: 0.9rem !important;
     font-family: inherit;
     font-style: inherit;
 }
@@ -62,21 +62,42 @@ st.markdown("""
     display: block;
     text-align: left;
     font-weight: inherit;
-    font-size: inherit;
+    font-size: 0.9rem !important;
     font-family: inherit;
     font-style: inherit;
 }
-.compact-table * {
+/* Force all column rows to stay on one line and shrink on mobile */
+[data-testid="stHorizontalBlock"] {
+    flex-wrap: nowrap !important;
+    gap: 0.25rem !important;
+    overflow-x: auto !important;
+}
+[data-testid="stColumn"] {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+/* Shrink text and inputs inside columns */
+[data-testid="stColumn"] p,
+[data-testid="stColumn"] span,
+[data-testid="stColumn"] div,
+[data-testid="stColumn"] pre {
+    font-size: 0.78rem !important;
     white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
-.compact-table {
-    font-size: 0.85rem !important;
+[data-testid="stColumn"] input[type="number"] {
+    font-size: 0.78rem !important;
+    padding: 0.2rem 0.3rem !important;
+    min-width: 0 !important;
+    width: 100% !important;
 }
-.compact-table input[type="number"] {
-    width: 3.5rem !important;
+[data-testid="stColumn"] [data-testid="stNumberInput"] > div {
+    padding: 0 !important;
+    gap: 0 !important;
 }
-.compact-table .stNumberInput > div {
-    padding: 0 0.15rem !important;
+[data-testid="stColumn"] [data-testid="stNumberInput"] button {
+    display: none !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -105,7 +126,6 @@ st.markdown("---")
 COL = [3, 1.5, 1.5, 2, 2.5]
 
 # Header row
-st.markdown('<div class="compact-table">', unsafe_allow_html=True)
 h = st.columns(COL)
 for i, title in enumerate(["Item", "DTE", "QQQ Price", "期權金", "平倉位"]):
     h[i].markdown(f"**{title}**")
@@ -199,8 +219,6 @@ row18_premium = c[3].number_input(
     label_visibility="collapsed",
 )
 c[4].text("> " + str(math.ceil(row18_qqq + row18_premium + 3)))
-
-st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("---")
 
