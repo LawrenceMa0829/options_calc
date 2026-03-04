@@ -90,14 +90,14 @@ qqq-price-darkgreen-left {
 [data-testid="stColumn"] p,
 [data-testid="stColumn"] span,
 [data-testid="stColumn"] pre {
-    font-size: 0.78rem !important;
+    font-size: 0.92rem !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
 [data-testid="stColumn"] input[type="number"] {
-    font-size: 0.78rem !important;
-    padding: 0.2rem 0.3rem !important;
+    font-size: 0.92rem !important;
+    padding: 0.28rem 0.4rem !important;
     min-width: 0 !important;
     width: 100% !important;
 }
@@ -132,7 +132,7 @@ with col3:
 st.markdown("---")
 
 # ===================== Options Table =====================
-COL = [3, 1.5, 1.5, 2, 2.5]
+COL = [3.2, 1.6, 1.6, 2.4, 2.2]
 
 # Header row
 h = st.columns(COL)
