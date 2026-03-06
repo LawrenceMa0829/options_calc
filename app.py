@@ -119,15 +119,18 @@ st.subheader("Sell Iron Condor - Stable Profit")
 
 # --- Input Parameters ---
 col1, col2, col3 = st.columns(3)
+# Place contracts before QQQ price in column 3 (user requested order)
+num_contracts = col3.number_input("多少張合約", value=1, step=1, min_value=1)
+qqq_price = col3.number_input("QQQ 現價", value=600, step=1)
+
 with col1:
     contracts_per_lot = st.number_input("每張合約（股）", value=100, disabled=True)
-    down_spread = st.number_input("向下Spread (-)", value=20, step=1, min_value=1)
+    default_down = int(round(0.03333 * qqq_price, 0))
+    down_spread = st.number_input("向下Spread (-)", value=default_down, step=1, min_value=1)
 with col2:
     spread_width = st.number_input("Spread 寬度", value=2, step=1, min_value=1)
-    up_spread = st.number_input("向上Spread (+)", value=15, step=1, min_value=1)
-with col3:
-    num_contracts = st.number_input("多少張合約", value=1, step=1, min_value=1)
-    qqq_price = st.number_input("QQQ 現價", value=600, step=1)
+    default_up = int(round(0.025 * qqq_price, 0))
+    up_spread = st.number_input("向上Spread (+)", value=default_up, step=1, min_value=1)
 
 st.markdown("---")
 
