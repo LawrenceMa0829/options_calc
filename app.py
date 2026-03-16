@@ -105,9 +105,6 @@ qqq-price-darkgreen-left {
     padding: 0 !important;
     gap: 0 !important;
 }
-[data-testid="stColumn"] [data-testid="stNumberInput"] button {
-    display: none !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
