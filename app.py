@@ -157,7 +157,7 @@ row11_premium = c[3].number_input(
 c[4].text("< " + str(math.ceil(row11_qqq - row11_premium - 3)))
 
 st.markdown("<hr style='border: none; border-top: 3px solid #fff; margin: 0.5rem 0;'>", unsafe_allow_html=True)
-
+st.markdown("<br>", unsafe_allow_html=True)
 
 # --- Row 13: 2DTE Long Put ---
 row13_qqq = qqq_price - down_spread - spread_width
@@ -215,7 +215,7 @@ c[3].number_input(
 c[4].write("")
 
 st.markdown("<hr style='border: none; border-top: 3px solid #fff; margin: 0.5rem 0;'>", unsafe_allow_html=True)
-
+st.markdown("<br>", unsafe_allow_html=True)
 
 # --- Row 18: 60DTE Long Call (insurance leg) ---
 row18_qqq = qqq_price + up_spread + spread_width + 14
