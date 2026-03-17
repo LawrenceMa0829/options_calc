@@ -134,10 +134,17 @@ st.markdown("---")
 # ===================== Options Table =====================
 COL = [4.0, 1.6, 2.3, 2.0, 1.8]
 
-# Header row
-h = st.columns(COL)
-for i, title in enumerate(["Item", "DTE", "QQQ Price", "期權金", "平倉位"]):
-    h[i].markdown(f"**{title}**")
+# Header row (sticky)
+st.markdown("""
+<div style="position: sticky; top: 0; z-index: 999; background: #0e1117;
+            display: flex; flex-wrap: nowrap; gap: 0.25rem; padding: 0.3rem 0;">
+    <div style="flex: 4.0; min-width: 0; font-weight: bold;">Item</div>
+    <div style="flex: 1.6; min-width: 0; font-weight: bold;">DTE</div>
+    <div style="flex: 2.3; min-width: 0; font-weight: bold;">QQQ Price</div>
+    <div style="flex: 2.0; min-width: 0; font-weight: bold;">期權金</div>
+    <div style="flex: 1.8; min-width: 0; font-weight: bold;">平倉位</div>
+</div>
+""", unsafe_allow_html=True)
 
 
 # --- Row 11: 60DTE Long Put (insurance leg) ---
