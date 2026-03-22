@@ -122,11 +122,11 @@ qqq_price = col3.number_input("QQQ 現價", value=600, step=1)
 
 with col1:
     contracts_per_lot = st.number_input("每張合約（股）", value=100, disabled=True)
-    default_down = int(round(0.030201 * qqq_price, 0))
+    default_down = int(round(0.03667 * qqq_price, 0))
     down_spread = st.number_input("向下Spread (-)", value=default_down, step=1, min_value=1)
 with col2:
-    spread_width = st.number_input("Spread 寬度", value=2, step=1, min_value=1)
-    default_up = int(round(0.028523 * qqq_price, 0))
+    spread_width = st.number_input("Spread 寬度", value=5, step=1, min_value=1)
+    default_up = int(round(0.035 * qqq_price, 0))
     up_spread = st.number_input("向上Spread (+)", value=default_up, step=1, min_value=1)
 
 st.markdown("---")
@@ -188,7 +188,7 @@ c[3].number_input(
     key="premium_2dte_sp",
     label_visibility="collapsed",
 )
-c[4].write(qqq_price - down_spread + 1)
+c[4].write(qqq_price - down_spread + 2.6)
 
 
 # --- Row 15: 2DTE Short Call ---
@@ -202,7 +202,7 @@ c[3].number_input(
     key="premium_2dte_sc",
     label_visibility="collapsed",
 )
-c[4].write(qqq_price + up_spread - 1)
+c[4].write(qqq_price + up_spread - 2.6)
 
 
 # --- Row 16: 2DTE Long Call ---
